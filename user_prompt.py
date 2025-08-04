@@ -1,12 +1,12 @@
 import numpy as np
 from main import Star
-types=['O', 'B', 'A', 'F', 'G', 'K', 'M', 'Y' 'supersolar', 'solar', 'subsolar']
+types=['3000', '4000', '5000', '6000', '7000', '8000', '0.0', '1.0', '2.0', '3.0', '4.0', '5.0', 'supersolar', 'solar', 'subsolar']
 
 while True:
-    print("Select spectral class: (options include: 'O', 'B', 'A', 'F', 'G', 'K', 'M', 'Y')")
+    print("Select effective temperature class: (options are: '3000', '4000', '5000', '6000', '7000', '8000')")
     try:
-        input_spec_type = input()
-        if input_spec_type not in types:
+        input_teff = input()
+        if input_teff not in types:
             raise ValueError('stuff is not in content')
     except:
         print("Invalid input. Please enter a valid spectral type.")
@@ -14,7 +14,18 @@ while True:
     else:
         break
 while True:
-    print("Select [M/H]: (options include 'supersolar', 'solar', or 'subsolar')")
+    print("Select surface gravity: (options include log(g) [dex] values of: '0.0', '1.0', '2.0', '3.0', '4.0', '5.0')")
+    try:
+        input_logg = input()
+        if input_logg not in types:
+            raise ValueError('stuff is not in content')
+    except ValueError:
+        print("Invalid input. Please enter a valid metallicity.")
+        continue
+    else:
+        break
+while True:
+    print("Select [M/H]: (options include 'supersolar' ([M/H]=0.5), 'solar' ([M/H]=0.0), or 'subsolar' ([M/H]=-2.0))")
     try:
         input_metallicity = input()
         if input_metallicity not in types:
@@ -24,7 +35,7 @@ while True:
         continue
     else:
         break
-plot_star = Star(input_spec_type, input_metallicity)
+plot_star = Star(input_teff, input_logg, input_metallicity)
 
 plot_star.select_spectra()
 
