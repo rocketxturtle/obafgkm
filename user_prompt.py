@@ -1,26 +1,15 @@
 import numpy as np
 from main import Star
-types=['O', 'B', 'A', 'F', 'G', 'K', 'M', 'giant', 'dwarf', 'supersolar', 'solar', 'subsolar']
+types=['O', 'B', 'A', 'F', 'G', 'K', 'M', 'Y' 'supersolar', 'solar', 'subsolar']
 
 while True:
-    print("Select spectral class: (options include: 'O', 'B', 'A', 'F', 'G', 'K', 'M')")
+    print("Select spectral class: (options include: 'O', 'B', 'A', 'F', 'G', 'K', 'M', 'Y')")
     try:
         input_spec_type = input()
         if input_spec_type not in types:
             raise ValueError('stuff is not in content')
     except:
         print("Invalid input. Please enter a valid spectral type.")
-        continue
-    else:
-        break
-while True:
-    print("Select evolutionary state: (options include 'giant' or 'dwarf')")
-    try:
-        input_evo_state = input()
-        if input_evo_state not in types:
-            raise ValueError('stuff is not in content')
-    except ValueError:
-        print("Invalid input. Please enter a valid evolutionary state.")
         continue
     else:
         break
@@ -35,7 +24,7 @@ while True:
         continue
     else:
         break
-plot_star = Star(input_spec_type, input_evo_state, input_metallicity)
+plot_star = Star(input_spec_type, input_metallicity)
 
 plot_star.select_spectra()
 
