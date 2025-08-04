@@ -6,13 +6,14 @@ class Star(object):
     
     """
 
-    def __init__(self, spectral_class, metallicity):
+    def __init__(self, effective_temperature, surface_gravity, metallicity):
         """
         Function that initializes our star and the three selected parameters needed to determined
         which spectra is generated
         """
 
-        self.spectral_class = spectral_class\
+        self.effective_temperature = effective_temperature
+        self.surface_gravity = surface_gravity
         self.metallicity = metallicity
 
     def select_spectra(self):
@@ -20,8 +21,7 @@ class Star(object):
         This function selects a given spectra to plot given the instatiated values for the
         star in question
         """
-        spec_list = pd.read_csv('(#name of csv with all the sim spectra info#)')
-        subselect = spec_list[(str(spec_list['spectral class'])==str(self.spectral_class)) 
-                            & (str(spec_list['metallicity'])==str(self.metallicity))]
-        filepath = subselect['(#name of column holding file names)#']
-        spectra = pd.read_csv(filepath)
+        spec_list = pd.read_csv('star_types.csv')
+        subselect = spec_list[(str(spec_list['effective_temperature'])==str(self.effective_temperature)) & (str(spec_list['surface_gravity'])==str(self.surface_gravity)) & (str(spec_list['metallicity'])==str(self.metallicity))]
+        filepath = subselect['filepath']
+        spectra = pd.read_txt(filepath)
