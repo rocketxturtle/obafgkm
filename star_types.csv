@@ -15,7 +15,7 @@
 3000,4.0,solar,teff_3000.0_logg_4.0_mh_0.0.txt,
 3000,4.0,supersolar,teff_3000.0_logg_4.0_mh_0.5.txt,
 3000,5.0,subsolar,teff_3000.0_logg_5.0_mh_-2.0.txt,
-3000,5.0,solar,teff_3000.0_logg_5.0_mh_0.0.txt,
+3000,5.0,solar,teff_3000.0_logg_5.0_mh_0.0.txt,Proxima Centauri
 3000,5.0,supersolar,teff_3000.0_logg_5.0_mh_0.5.txt,
 4000,0.0,subsolar,teff_4000.0_logg_0.0_mh_-2.0.txt,
 4000,0.0,solar,teff_4000.0_logg_0.0_mh_0.0.txt,
@@ -30,10 +30,10 @@
 4000,3.0,solar,teff_4000.0_logg_3.0_mh_0.0.txt,
 4000,3.0,supersolar,teff_4000.0_logg_3.0_mh_0.5.txt,
 4000,4.0,subsolar,teff_4000.0_logg_4.0_mh_-2.0.txt,
-4000,4.0,solar,teff_4000.0_logg_4.0_mh_0.0.txt,
+4000,4.0,solar,teff_4000.0_logg_4.0_mh_0.0.txt,GJ 229
 4000,4.0,supersolar,teff_4000.0_logg_4.0_mh_0.5.txt,
 4000,5.0,subsolar,teff_4000.0_logg_5.0_mh_-2.0.txt,
-4000,5.0,solar,teff_4000.0_logg_5.0_mh_0.0.txt,
+4000,5.0,solar,teff_4000.0_logg_5.0_mh_0.0.txt,AX Microscopii
 4000,5.0,supersolar,teff_4000.0_logg_5.0_mh_0.5.txt,
 5000,0.0,subsolar,teff_5000.0_logg_0.0_mh_-2.0.txt,
 5000,0.0,solar,teff_5000.0_logg_0.0_mh_0.0.txt,
