@@ -38,6 +38,13 @@ def plotter(spectra_tuple, save=False):
     ax2.set_ylabel('Normalized Flux')
     ax1.set_yscale('log')
     [ax.grid(True) for ax in [ax1, ax2]]
+    [ax.axvline(3968.47, c='orange', lw=0.5, label='Ca H') for ax in [ax1, ax2]]
+    [ax.axvline(3933.66, c='orange', lw=0.5, label='Ca K') for ax in [ax1, ax2]]
+    [ax.axvline(4861.34, c='k', lw=0.5, linestyle='-.', label=r'H $\beta$') for ax in [ax1, ax2]]
+    [ax.axvline(5889.95, c='purple', lw=0.5, linestyle='--', label=r'Na D$_{2}$') for ax in [ax1, ax2]]
+    [ax.axvline(5895.92, c='purple', lw=0.5, linestyle='--', label=r'Na D$_{1}$',) for ax in [ax1, ax2]]
+    [ax.axvline(6562.81, c='k', lw=0.5, linestyle=':', label=r'H $\alpha$') for ax in [ax1, ax2]]
+    [ax.legend(ncols=3, fontsize=12) for ax in [ax1, ax2]]
     if save:
         if not os.path.exists('plots'):
             os.makedirs('plots')
