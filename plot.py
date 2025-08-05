@@ -26,21 +26,23 @@ def plotter(spectra_tuple, save=False):
 
     (teff, logg, m_h) = [parameters[i] for i in range(3)]
 
-    fig, [ax1, ax2]  = plt.subplots(2, 1, figsize=(20, 10))#, layout='constrained')
+    fig, [ax1, ax2]  = plt.subplots(2, 1, figsize=(20, 14), layout='constrained')
     
     ax1.plot(wav_unnormed, flux_unnormed, color='blue', lw=0.5)
     ax2.plot(wav_normed, flux_normed, color='r', lw=0.5)
 
-    fig.suptitle(f'Spectrum of T$_[eff]$={teff}, $\log$(g)={logg}, [M/H]={m_h} ')
+    fig.suptitle("Spectrum of T$_{eff}$=" + str(teff) + " , $\log$(g)=" + str(logg) + ", [M/H]=" + str(m_h), weight='bold')
     fig.supxlabel('Wavelength ($\AA$)')
     
     ax1.set_ylabel('Flux [erg/s/cm$^{5}$]')
     ax2.set_ylabel('Normalized Flux')
     ax1.set_yscale('log')
     [ax.grid(True) for ax in [ax1, ax2]]
-    # [ax.legend() for ax in [ax1, ax2]]
     if save:
         if not os.path.exists('plots'):
             os.makedirs('plots')
-        plt.savefig(os.path.join('plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
+        if(os.path.exists(os.path.join('plots', filepath.split('.txt')[0] + '_spectrum.png'))):
+            print(f"This spectrum has already been saved! Look in plots/{filepath.split('.txt')[0]}_spectrum.png")
+        else:
+            plt.savefig(os.path.join('plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
     plt.show()
