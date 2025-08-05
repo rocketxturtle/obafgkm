@@ -1,11 +1,12 @@
 import numpy as np
 from main import Star
-types=['3000', '4000', '5000', '6000', '7000', '8000', '0.0', '1.0', '2.0', '3.0', '4.0', '5.0', 'supersolar', 'solar', 'subsolar']
+types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
+metals = ['supersolar', 'solar', 'subsolar']
 
 while True:
     print("Select effective temperature class: (options are: '3000', '4000', '5000', '6000', '7000', '8000')")
     try:
-        input_teff = input()
+        input_teff = int(input())
         if input_teff not in types:
             raise ValueError('stuff is not in content')
     except:
@@ -16,7 +17,7 @@ while True:
 while True:
     print("Select surface gravity: (options include log(g) [dex] values of: '0.0', '1.0', '2.0', '3.0', '4.0', '5.0')")
     try:
-        input_logg = input()
+        input_logg = float(input())
         if input_logg not in types:
             raise ValueError('stuff is not in content')
     except ValueError:
@@ -27,8 +28,8 @@ while True:
 while True:
     print("Select [M/H]: (options include 'supersolar' ([M/H]=0.5), 'solar' ([M/H]=0.0), or 'subsolar' ([M/H]=-2.0))")
     try:
-        input_metallicity = input()
-        if input_metallicity not in types:
+        input_metallicity = str(input())
+        if input_metallicity not in metals:
             raise ValueError('stuff is not in content')
     except ValueError:
         print("Invalid input. Please enter a valid metallicity.")
