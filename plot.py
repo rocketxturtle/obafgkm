@@ -26,7 +26,7 @@ def plotter(spectra_tuple, save=False):
 
     (teff, logg, m_h) = [parameters[i] for i in range(3)]
 
-    fig, [ax1, ax2]  = plt.subplots(2, 1, figsize=(20, 10), layout='constrained')
+    fig, [ax1, ax2]  = plt.subplots(2, 1, figsize=(20, 10))#, layout='constrained')
     
     ax1.plot(wav_unnormed, flux_unnormed, color='blue', lw=0.5)
     ax2.plot(wav_normed, flux_normed, color='r', lw=0.5)

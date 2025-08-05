@@ -41,4 +41,4 @@ plot_star = Star(input_teff, input_logg, input_metallicity)
 
 stellar_info = plot_star.select_spectra() # four value tuple
 
-plotter(stellar_info, True)
+plotter(stellar_info, input("Would you like to save the plot? (y/n): ").lower() == 'y')
