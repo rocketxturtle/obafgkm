@@ -25,6 +25,8 @@ class Star(object):
         """
         spec_list = pd.read_csv('star_types.csv')
         subselect = spec_list[(spec_list['effective_temp']==self.effective_temperature) & (spec_list['surface_gravity']==self.surface_gravity) & (spec_list['metallicity']==self.metallicity)]
-        filepath = subselect['filepath'].values[0]
-        spectra = np.loadtxt(os.path.join('spectra', filepath), skiprows=0)
-        return (spectra, filepath)
+        filename = subselect['filepath'].values[0]
+        unnormalized = np.loadtxt(os.path.join('unnormalized_spectra', filename), skiprows=0)
+        normalized = np.loadtxt(os.path.join('normalized_spectra', filename), skiprows=0)
+        parameters = (self.effective_temperature, self.surface_gravity, self.metallicity)
+        return (unnormalized, normalized, parameters, filename)

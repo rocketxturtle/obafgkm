@@ -20,16 +20,25 @@ def plotter(spectra_tuple, save=False):
     
     """
     set_rcparams()
-    spectra, filepath = spectra_tuple
-    wav, flux = (spectra[:,0], spectra[:,1])
-    fig, ax  = plt.subplots(1, 1, figsize=(20, 6), layout='constrained')
-    ax.plot(wav, flux, color='blue', label='Spectrum', lw=0.5)
-    fig.suptitle('Spectrum Plot')
+    unnormalized_spectra, normalized_spectra, parameters, filepath = spectra_tuple
+    wav_unnormed, flux_unnormed = (unnormalized_spectra[:,0], unnormalized_spectra[:,1])
+    wav_normed, flux_normed = (normalized_spectra[:,0], normalized_spectra[:,1])
+
+    (teff, logg, m_h) = [parameters[i] for i in range(3)]
+
+    fig, [ax1, ax2]  = plt.subplots(2, 1, figsize=(20, 6), layout='constrained')
+    
+    ax1.plot(wav_unnormed, flux_unnormed, color='blue', lw=0.5)
+    ax1.plot(wav_unnormed, flux_unnormed, color='r', lw=0.5)
+
+    fig.suptitle(f'Spectrum of T$_[eff]$={teff}, $\log$(g)={logg}, [M/H]={m_h} ')
     fig.supxlabel('Wavelength ($\AA$)')
-    fig.supylabel('Flux')
-    ax.set_yscale('log')
-    ax.grid(True)
-    ax.legend()
+    
+    ax1.set_ylabel('Flux [erg/s/cm$^{5}$]')
+    ax2.set_ylabel('Normalized Flux')
+    ax1.set_yscale('log')
+    [ax.grid(True) for ax in [ax1, ax2]]
+    # [ax.legend() for ax in [ax1, ax2]]
     if save:
         if not os.path.exists('plots'):
             os.makedirs('plots')
