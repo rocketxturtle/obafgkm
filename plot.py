@@ -1,16 +1,37 @@
+from astropy.table import Table
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+import pathlib
 
-spec = np.loadtxt('codeastro_files/teff_4000.0_logg_0.0_mh_0.0.txt', skiprows=0)
-wav, flux = (spec[:,0], spec[:,1])
+os.chdir(pathlib.Path.cwd())
+def set_rcparams():
+    tab = Table.read('rcparams.txt', format='csv')
+    for i in range(len(tab)):
+        try:
+            plt.rcParams[tab['key'][i]] = float(tab['val'][i])
+        except ValueError:
+            plt.rcParams[tab['key'][i]] = str(tab['val'][i])
+    return
 
-plt.figure(figsize=(20, 6))
-plt.plot(wav, flux, color='blue', label='Spectrum', lw=0.5)
-plt.title('Spectrum Plot')
-plt.xlabel('Wavelength (Angstroms)')
-plt.ylabel('Flux')
-plt.yscale('log')
-plt.grid(True)
-plt.legend()
-# plt.savefig('spectrum_plot.png')
-plt.show()
+def plotter(spectra_tuple, save=False):
+    """
+    Plotting function to display a spectra graphically
+    
+    """
+    set_rcparams()
+    spectra, filepath = spectra_tuple
+    wav, flux = (spectra[:,0], spectra[:,1])
+    fig, ax  = plt.subplots(1, 1, figsize=(20, 6), layout='constrained')
+    ax.plot(wav, flux, color='blue', label='Spectrum', lw=0.5)
+    fig.suptitle('Spectrum Plot')
+    fig.supxlabel('Wavelength ($\AA$)')
+    fig.supylabel('Flux')
+    ax.set_yscale('log')
+    ax.grid(True)
+    ax.legend()
+    if save:
+        if not os.path.exists('plots'):
+            os.makedirs('plots')
+        plt.savefig(os.path.join('plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
+    plt.show()

@@ -1,5 +1,6 @@
 import numpy as np
 from main import Star
+from plot import plotter
 types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
 metals = ['supersolar', 'solar', 'subsolar']
 
@@ -38,4 +39,6 @@ while True:
         break
 plot_star = Star(input_teff, input_logg, input_metallicity)
 
-stellar_spec = plot_star.select_spectra()
+stellar_info = plot_star.select_spectra()
+
+plotter(stellar_info, False)
