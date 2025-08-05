@@ -39,4 +39,4 @@ plot_star = Star(input_teff, input_logg, input_metallicity)
 
 plot_star.select_spectra()
 
-plot_star.plot_spectra()
+#plot_star.plot_spectra()

@@ -22,6 +22,6 @@ class Star(object):
         star in question
         """
         spec_list = pd.read_csv('star_types.csv')
-        subselect = spec_list[(str(spec_list['effective_temperature'])==str(self.effective_temperature)) & (str(spec_list['surface_gravity'])==str(self.surface_gravity)) & (str(spec_list['metallicity'])==str(self.metallicity))]
+        subselect = spec_list[(spec_list['effective_temp']==self.effective_temperature) & (spec_list['surface_gravity']==self.surface_gravity) & (spec_list['metallicity']==self.metallicity)]
         filepath = subselect['filepath']
-        spectra = pd.read_txt(filepath)
+        spectra = pd.read_csv(filepath)
