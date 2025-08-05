@@ -25,4 +25,5 @@ class Star(object):
         spec_list = pd.read_csv('star_types.csv')
         subselect = spec_list[(spec_list['effective_temp']==self.effective_temperature) & (spec_list['surface_gravity']==self.surface_gravity) & (spec_list['metallicity']==self.metallicity)]
         filepath = subselect['filepath'].values[0]
-        spectra = pd.read_csv(os.path.join('spectra', filepath), sep=' ')
+        spectra = pd.read_csv(os.path.join('spectra', filepath), sep=' ', names=['wavelength', 'flux'], header=None)
+        return spectra
