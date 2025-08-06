@@ -1,6 +1,6 @@
-import numpy as np
-from main import Star
-from plot import plotter
+import obafgkm.main as obafgkm
+from obafgkm import plot as plotter
+
 types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
 metals = ['supersolar', 'solar', 'subsolar']
 
@@ -38,12 +38,8 @@ def run():
             continue
         else:
             break
-    plot_star = Star(input_teff, input_logg, input_metallicity)
+    plot_star = obafgkm.Star(input_teff, input_logg, input_metallicity)
 
     stellar_info = plot_star.select_spectra() # four value tuple
 
     plotter(stellar_info, input("Would you like to save the plot? (y/n): ").lower() == 'y')
-
-
-if __name__ == "__main__":
-    run()
