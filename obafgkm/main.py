@@ -8,7 +8,7 @@ class Star(object):
     
     """
 
-    def __init__(self, effective_temperature, surface_gravity, metallicity):
+    def __init__(self, effective_temperature:int, surface_gravity:float, metallicity:str):
         """
         Function that initializes our star and the three selected parameters needed to determined
         which spectra is generated

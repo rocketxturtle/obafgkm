@@ -1,5 +1,4 @@
 from astropy.table import Table
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 import pathlib
@@ -21,7 +20,7 @@ def set_rcparams():
             plt.rcParams[tab['key'][i]] = str(tab['val'][i])
     return
 
-def plotter(spectra_tuple, save=False):
+def plotter(spectra_tuple:tuple, save=False):
     """Core function to plot KORG spectra of a determined Star() object with specific Teff, log(g), and [M/H]
 
     Args:
