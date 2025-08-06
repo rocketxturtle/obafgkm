@@ -43,3 +43,7 @@ def run():
     stellar_info = plot_star.select_spectra() # four value tuple
 
     plotter(stellar_info, input("Would you like to save the plot? (y/n): ").lower() == 'y')
+
+
+if __name__ == "__main__":
+    run()
