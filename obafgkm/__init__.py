@@ -7,7 +7,7 @@ __version__ = "0.0.1-alpha"
 DATADIR = os.path.dirname(__file__)
 unnormed_data = os.path.join(DATADIR, "unnormalized_spectra/")
 normed_data = os.path.join(DATADIR, "normalized_spectra/")
-csv = os.path.join(DATADIR, "star_types.csv")
+STARCSV = os.path.join(DATADIR, "star_types.csv")
 rcparams = os.path.join(DATADIR, "rcparams.txt")
 
 

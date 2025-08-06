@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import pathlib
-from obafgkm import unnormed_data, normed_data
+from obafgkm import unnormed_data, normed_data, STARCSV
 
 os.chdir(pathlib.Path.cwd())
 class Star(object):
@@ -26,7 +26,7 @@ class Star(object):
         This function selects a given spectra to plot given the instatiated values for the
         star in question
         """
-        spec_list = pd.read_csv('star_types.csv')
+        spec_list = pd.read_csv(STARCSV)
         subselect = spec_list[(spec_list['effective_temp']==self.effective_temperature) & (spec_list['surface_gravity']==self.surface_gravity) & (spec_list['metallicity']==self.metallicity)]
         filename = subselect['filepath'].values[0]
         unnormalized = np.loadtxt(os.path.join(unnormed_data, filename), skiprows=0)
