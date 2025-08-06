@@ -1,5 +1,15 @@
-from * import unnormalized_spectra
-from * import normalized_spectra
-from * import star_types.csv
+import os
+import pathlib
+
+__version__ = "0.0.1-alpha"
+
+# set Python env variable to keep track of example data dir
+DATADIR = os.path.dirname(__file__)
+unnormed_data = os.path.join(DATADIR, "unnormalized_spectra/")
+normed_data = os.path.join(DATADIR, "normalized_spectra/")
+csv = os.path.join(DATADIR, "star_types.csv")
+rcparams = os.path.join(DATADIR, "rcparams.txt")
+
+
 print("You have successfully imported obafgkm!")
-print("The spectra in this package were synthesized from MARCS model atmospheres using Korg. Due to this are currently only available within [3000,8000] K. Future releases will aim to expand this range.")
+print("The spectra in this package were synthesized from MARCS model atmospheres using Korg.\n Due to this are currently only available within [3000, 8000] K. Future releases will aim to expand this range.")

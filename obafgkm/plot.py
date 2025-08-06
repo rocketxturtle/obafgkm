@@ -2,6 +2,8 @@ from astropy.table import Table
 import matplotlib.pyplot as plt
 import os
 import pathlib
+from obafgkm import DATADIR, rcparams
+
 
 os.chdir(pathlib.Path.cwd())
 def set_rcparams():
@@ -12,7 +14,7 @@ def set_rcparams():
     Returns:
         None
     """
-    tab = Table.read('rcparams.txt', format='csv')
+    tab = Table.read(rcparams, format='csv')
     for i in range(len(tab)):
         try:
             plt.rcParams[tab['key'][i]] = float(tab['val'][i])
@@ -57,10 +59,10 @@ def plotter(spectra_tuple:tuple, save=False):
     [ax.axvline(6562.81, c='k', lw=0.5, linestyle=':', label=r'H $\alpha$') for ax in [ax1, ax2]]
     [ax.legend(ncols=3, fontsize=12) for ax in [ax1, ax2]]
     if save:
-        if not os.path.exists('~/obafgkm/plots'):
-            os.makedirs('~/obafgkm/plots')
-        if(os.path.exists(os.path.join('~/obafgkm/plots', filepath.split('.txt')[0] + '_spectrum.png'))):
+        if not os.path.exists(os.path.join(DATADIR, 'plots')):
+            os.makedirs('plots')
+        if(os.path.exists(os.path.join(DATADIR, 'plots', filepath.split('.txt')[0] + '_spectrum.png'))):
             print(f"This spectrum has already been saved! Look in plots/{filepath.split('.txt')[0]}_spectrum.png")
         else:
-            plt.savefig(os.path.join('~/obafgkm/plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
+            plt.savefig(os.path.join(DATADIR, 'plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
     plt.show()
