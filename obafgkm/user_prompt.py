@@ -1,6 +1,6 @@
 import numpy as np
-from main import Star
-from plot import plotter
+from obafgkm/main import Star
+from obafgkm/plot import plotter
 types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
 metals = ['supersolar', 'solar', 'subsolar']
 
