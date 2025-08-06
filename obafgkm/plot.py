@@ -6,6 +6,13 @@ import pathlib
 
 os.chdir(pathlib.Path.cwd())
 def set_rcparams():
+    """Function to apply rcparams.txt file to all output plots
+
+    Args:
+        None
+    Returns:
+        None
+    """
     tab = Table.read('obafgkm/rcparams.txt', format='csv')
     for i in range(len(tab)):
         try:
@@ -15,9 +22,14 @@ def set_rcparams():
     return
 
 def plotter(spectra_tuple, save=False):
-    """
-    Plotting function to display a spectra graphically
-    
+    """Core function to plot KORG spectra of a determined Star() object with specific Teff, log(g), and [M/H]
+
+    Args:
+        spectra_tuple (tuple): a tuple object that holds (Teff, log(g), [M/H]) values as determined when user_prompts.run() is ran
+        save (bool): a boolean object to denote whether the plotted spectra should be saved (in the /plots folder) or not
+
+    Returns:
+        None
     """
     set_rcparams()
     unnormalized_spectra, normalized_spectra, parameters, filepath = spectra_tuple
