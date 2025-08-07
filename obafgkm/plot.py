@@ -60,7 +60,7 @@ def plotter(spectra_tuple:tuple, save=False):
     [ax.legend(ncols=3, fontsize=12) for ax in [ax1, ax2]]
     if save:
         if not os.path.exists(os.path.join(DATADIR, 'plots')):
-            os.makedirs('plots')
+            os.makedirs(os.path.join(DATADIR, 'plots'))
         if(os.path.exists(os.path.join(DATADIR, 'plots', filepath.split('.txt')[0] + '_spectrum.png'))):
             print(f"This spectrum has already been saved! Look in plots/{filepath.split('.txt')[0]}_spectrum.png")
         else:
