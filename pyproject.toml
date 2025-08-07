@@ -4,11 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "obafgkm"
-version = "0.1.0"
+dynamic = ["version"]
 
 dependencies = [
 "numpy",
 "pandas",
 "astropy",
-"matplotlib"
+"matplotlib",
+"pytest"
 ]
+
+[tool.setuptools.dynamic]
+version = {attr = "obafgkm.__version__"}
+
+[tool.setuptools.packages]
+find = {}

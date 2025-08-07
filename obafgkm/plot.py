@@ -44,7 +44,7 @@ def plotter(spectra_tuple:tuple, save=False):
     ax1.plot(wav_unnormed, flux_unnormed, color='blue', lw=0.5)
     ax2.plot(wav_normed, flux_normed, color='r', lw=0.5)
 
-    fig.suptitle(r"Spectrum of T$_{\rm{eff}}$=" + str(teff) + ", $\log$(g)=" + str(logg) + ", [M/H]=" + str(m_h), weight='bold')
+    fig.suptitle(r"Spectrum of T$_{\rm{eff}}$=" + str(teff) + r", $\log$(g)=" + str(logg) + ", [M/H]=" + str(m_h), weight='bold')
     fig.supxlabel(r'Wavelength ($\rm{\AA}$)')
     
     ax1.set_ylabel('Flux [erg/s/cm$^{5}$]')
