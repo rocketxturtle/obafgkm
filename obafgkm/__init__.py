@@ -1,6 +1,6 @@
 import os
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 # set Python env variable to keep track of example data dir
 DATADIR = os.path.dirname(__file__)
