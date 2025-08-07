@@ -35,13 +35,14 @@ release = '0.1.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-  "sphinx.ext.autodoc",
-  "sphinx.ext.doctest",
-  "sphinx.ext.todo",
-  "sphinx.ext.mathjax",
-  "sphinx.ext.napoleon",  # allows Google style-guide docs to render more prettily
-  "sphinx.ext.viewcode",
-  "nbsphinx",
+    "sphinx_rtd_theme"
+    "sphinx.ext.autodoc",
+    "sphinx.ext.doctest",
+    "sphinx.ext.todo",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",  # allows Google style-guide docs to render more prettily
+    "sphinx.ext.viewcode",
+    "nbsphinx",
 ]
 # Disable notebook timeout
 nbsphinx_timeout = -1
