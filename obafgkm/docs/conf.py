@@ -26,7 +26,7 @@ author = "Amaya Sinha, Katya Gozman, Meir Schochet, Lisha Ramon"
 root_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = '0.1.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -61,8 +61,6 @@ source_suffix = ".rst"
 
 # The master toctree document.
 master_doc = "index"
-
-version = obafgkm.__version__
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
