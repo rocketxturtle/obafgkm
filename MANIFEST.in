@@ -1,0 +1,4 @@
+include obafgkm/normalized_spectra/*
+include obafgkm/unnormalized_spectra/*
+include obafgkm/star_types.csv
+include obafgkm/rcparams.txt
