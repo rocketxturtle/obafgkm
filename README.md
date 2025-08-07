@@ -1,6 +1,6 @@
 # obafgkm 🌟
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16762220.svg)](https://doi.org/10.5281/zenodo.16762220)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16764379.svg)](https://doi.org/10.5281/zenodo.16764379)
 [![PyPI version](https://badge.fury.io/py/obafgkm.svg?icon=si%3Apython)](https://badge.fury.io/py/obafgkm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![A rectangular badge, half black half purple containing the text made at Code Astro](https://img.shields.io/badge/Made%20at-Code/Astro-blueviolet.svg)](https://semaphorep.github.io/codeastro/)
