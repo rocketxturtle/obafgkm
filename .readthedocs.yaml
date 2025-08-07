@@ -5,7 +5,7 @@
 version: 2
 sphinx:
   # Path to your Sphinx configuration file.
-  configuration: docs/conf.py
+  configuration: obafgkm/docs/conf.py
 
 formats:
    - pdf
