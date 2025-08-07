@@ -75,9 +75,10 @@ This will launch an interactive session where you can select stellar parameters 
 ## 📊 Usage
 
 ### Interactive Mode
-The simplest way to use `obafgkm` is through the interactive prompt:
+The simplest way to use `obafgkm` is through the terminal:
 
-```python
+```
+python
 import obafgkm.prompt as p
 p.run()
 ```
@@ -88,9 +89,9 @@ You'll be prompted to select:
 3. **Metallicity** ('subsolar', 'solar', or 'supersolar')
 
 ### Programmatic Usage
-For more control, you can use the package programmatically:
+For more control, you can use the package by manually setting the `Star` object parameters:
 
-```python
+```
 import obafgkm.main as obafgkm
 from obafgkm.plot import plotter
 
@@ -109,7 +110,7 @@ plotter(spectra_data, save=True)  # Set save=False to just display
 ```
 
 ### Custom Plotting
-Access the raw spectral data for custom analysis:
+Access the raw spectral data for more detailed analysis:
 
 ```python
 import obafgkm.main as obafgkm
@@ -149,7 +150,8 @@ plt.show()
 ## 🌟 Examples
 
 ### Example 1: Sun-like Star
-```python
+```
+python
 import obafgkm.main as obafgkm
 from obafgkm.plot import plotter
 
@@ -163,7 +165,8 @@ plotter(sun_like.select_spectra(), save=True)
 ```
 
 ### Example 2: Red Giant (like Aldebaran)
-```python
+```
+python
 # K-type giant star
 red_giant = obafgkm.Star(
     effective_temperature=4000,
@@ -174,8 +177,9 @@ plotter(red_giant.select_spectra())
 ```
 
 ### Example 3: Metal-Poor Subdwarf
-```python
-# Metal-poor high-gravity star
+```
+python
+# Metal-poor dwarf star
 subdwarf = obafgkm.Star(
     effective_temperature=5000,
     surface_gravity=5.0,
@@ -228,9 +232,9 @@ We welcome contributions! Please feel free to:
 
 ## 📚 Citation
 
-If you use `obafgkm` in your research, please cite:
+If you use `obafgkm` in your research, please cite (bibtex):
 
-```bibtex
+```
 @misc{obafgkm,
   author = {{Schochet, Meir}, {Sinha, Amaya}, {Gozman, Katya}, {Ramon, Lisha}},
   title = {obafgkm: Interactive Stellar Spectra Plotting Tool},
@@ -271,4 +275,3 @@ Found a bug or have a question? Please open an issue on our [GitHub Issues](http
 **Happy stellar spectroscopy! 🔭✨**
 
 *Remember: The universe is under no obligation to make sense to you, but these spectra might help!*
-
