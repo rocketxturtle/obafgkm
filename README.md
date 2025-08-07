@@ -242,7 +242,7 @@ If you use `obafgkm` in your research, please cite (bibtex):
 
 ```
 @misc{obafgkm,
-  author = {{Schochet, Meir}, {Sinha, Amaya}, {Gozman, Katya}, {Ramon, Lisha}},
+  author = {{Gozman, Katya}, {Sinha, Amaya}, {Schochet, Meir}, {Ramon, Lisha}},
   title = {obafgkm: Interactive Stellar Spectra Plotting Tool},
   year = {2025},
   publisher = {Zenodo},
