@@ -5,6 +5,13 @@ types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
 metals = ['supersolar', 'solar', 'subsolar']
 
 def run():
+    """Function to run our prompter program to plot a specific spectra
+
+    Args:
+        None
+    Returns:
+        None
+    """
     while True:
         print("Select effective temperature class: (options are: '3000', '4000', '5000', '6000', '7000', '8000')")
         try:
