@@ -32,8 +32,14 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'sphinx.ext.autodoc',
-'sphinx.ext.napoleon'
+  "sphinx_rtd_theme",
+  "sphinx.ext.autodoc",
+  "sphinx.ext.doctest",
+  "sphinx.ext.todo",
+  "sphinx.ext.mathjax",
+  "sphinx.ext.napoleon",  # allows Google style-guide docs to render more prettily
+  "sphinx.ext.viewcode",
+  "nbsphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
