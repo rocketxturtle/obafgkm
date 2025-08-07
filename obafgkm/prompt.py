@@ -1,5 +1,5 @@
 import obafgkm.main as obafgkm
-from obafgkm import plot as plotter
+from obafgkm.plot import plotter as plotter
 
 types=[3000, 4000, 5000, 6000, 7000, 8000, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
 metals = ['supersolar', 'solar', 'subsolar']
