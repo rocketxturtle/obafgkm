@@ -12,7 +12,6 @@ class Star(object):
         effective_temperature (int): KORG effective temperature for selected star (in Kelvin)
         surface_gravity (float): KORG surface gravity for selected star (in dex, re: 10**surface_gravity)
         metallicity (str): KORG metallicity for selected star ('solar','subsolar', & 'supersolar' with values of -2.0, 0.0, and 0.5 for [M/H]
-
     """
 
     def __init__(self, effective_temperature:int, surface_gravity:float, metallicity:str):
