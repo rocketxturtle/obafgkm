@@ -22,13 +22,13 @@ authors:
     orcid: 'https://orcid.org/0009-0000-2546-0829'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.16764652
+    value: 10.5281/zenodo.16768178
 repository-code: 'https://github.com/rocketxturtle/obafgkm'
 abstract: Interactive Stellar Spectra Plotting Tool
 keywords:
   - spectra
   - demo
 license: MIT
-commit: 09097f1
+commit: 0819593
 version: v0.1.3
 date-released: '2025-08-07'
