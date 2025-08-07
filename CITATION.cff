@@ -19,15 +19,16 @@ authors:
     orcid: 'https://orcid.org/0009-0007-9766-2324'
   - given-names: Lisha
     family-names: Ramon
+    orcid: 'https://orcid.org/0009-0000-2546-0829'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.16762220
+    value: 10.5281/zenodo.16764652
 repository-code: 'https://github.com/rocketxturtle/obafgkm'
 abstract: Interactive Stellar Spectra Plotting Tool
 keywords:
   - spectra
   - demo
 license: MIT
-commit: 996df5f
-version: v0.1.0
+commit: 09097f1
+version: v0.1.2
 date-released: '2025-08-07'
