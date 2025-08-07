@@ -30,7 +30,7 @@ def plotter(spectra_tuple:tuple, save=False):
         save (bool): a boolean object to denote whether the plotted spectra should be saved (in the /plots folder) or not
 
     Returns:
-        fig (matplotlib.Figure): a figure object of the plotted spectra
+        None
     """
     set_rcparams()
     unnormalized_spectra, normalized_spectra, parameters, filepath = spectra_tuple
@@ -65,5 +65,3 @@ def plotter(spectra_tuple:tuple, save=False):
             print(f"This spectrum has already been saved! Look in plots/{filepath.split('.txt')[0]}_spectrum.png")
         else:
             plt.savefig(os.path.join(DATADIR, 'plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
-    plt.show()
-    return fig

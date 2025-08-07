@@ -1,5 +1,5 @@
 key,val
-backend,TkAgg
+backend,AGG
 font.size,20
 text.color,'k'
 axes.labelcolor,'k'
