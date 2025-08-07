@@ -9,21 +9,21 @@
 An interactive Python tool for plotting representative stellar spectra across different spectral types and metallicities! Perfect for astronomy education, research, and stellar classification studies.
 
 ## 📖 Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Parameters](#parameters)
-- [Examples](#examples)
-- [Data Sources](#data-sources)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [Citation](#citation)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Usage](#-usage)
+- [Parameters](#-parameters)
+- [Examples](#-examples)
+- [Data Sources](#-data-sources)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [Citation](#-citation)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
 ## ✨ Features
-#features
+
 - **Interactive Stellar Spectra Plotting**: Generate and visualize synthetic stellar spectra with customizable parameters
 - **Wide Parameter Range**: 
   - Effective temperatures: 3000K - 8000K
@@ -35,7 +35,6 @@ An interactive Python tool for plotting representative stellar spectra across di
 - **Pre-computed Spectra**: Fast loading from pre-synthesized MARCS/Korg models
 
 ## 🚀 Installation
-#installation
 
 ### From PyPI (Stable Release)
 ```
