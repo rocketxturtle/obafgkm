@@ -23,7 +23,7 @@ An interactive Python tool for plotting representative stellar spectra across di
 - [Acknowledgments](#acknowledgments)
 
 ## ✨ Features
-
+#features
 - **Interactive Stellar Spectra Plotting**: Generate and visualize synthetic stellar spectra with customizable parameters
 - **Wide Parameter Range**: 
   - Effective temperatures: 3000K - 8000K
@@ -35,14 +35,15 @@ An interactive Python tool for plotting representative stellar spectra across di
 - **Pre-computed Spectra**: Fast loading from pre-synthesized MARCS/Korg models
 
 ## 🚀 Installation
+#installation
 
 ### From PyPI (Stable Release)
-```bash
+```
 pip install obafgkm
 ```
 
 ### From GitHub (Development Version)
-```bash
+```
 # Latest development version
 pip install git+https://github.com/rocketxturtle/obafgkm
 
