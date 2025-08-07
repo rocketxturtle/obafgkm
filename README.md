@@ -8,7 +8,7 @@
 
 An interactive Python tool for plotting representative stellar spectra across different spectral types and metallicities! Perfect for astronomy education, research, and stellar classification studies.
 
-## 📖 Table of Contents
+## Table of Contents
 - [Features](#-features)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
@@ -22,7 +22,7 @@ An interactive Python tool for plotting representative stellar spectra across di
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
-## ✨ Features
+## Features
 
 - **Interactive Stellar Spectra Plotting**: Generate and visualize synthetic stellar spectra with customizable parameters
 - **Wide Parameter Range**: 
@@ -34,7 +34,7 @@ An interactive Python tool for plotting representative stellar spectra across di
 - **Export Capabilities**: Save high-resolution plots for publications and presentations
 - **Pre-computed Spectra**: Fast loading from pre-synthesized MARCS/Korg models
 
-## 🚀 Installation
+## Installation
 
 ### From PyPI (Stable Release)
 ```
@@ -61,18 +61,18 @@ The package requires the following Python libraries:
 
 These will be automatically installed with the package.
 
-## 🎯 Quick Start
+## Quick Start 
 
-```python
+```
+# In the terminal
+python
 import obafgkm.prompt as p
-
-# Run the interactive prompt
 p.run()
 ```
 
 This will launch an interactive session where you can select stellar parameters and generate spectra.
 
-## 📊 Usage
+## Usage
 
 ### Interactive Mode
 The simplest way to use `obafgkm` is through the terminal:
@@ -83,7 +83,7 @@ import obafgkm.prompt as p
 p.run()
 ```
 
-You'll be prompted to select:
+After which ou'll be prompted to select:
 1. **Effective temperature** (3000, 4000, 5000, 6000, 7000, or 8000 K)
 2. **Surface gravity** (log(g): 0.0, 1.0, 2.0, 3.0, 4.0, or 5.0 dex)
 3. **Metallicity** ('subsolar', 'solar', or 'supersolar')
@@ -112,7 +112,7 @@ plotter(spectra_data, save=True)  # Set save=False to just display
 ### Custom Plotting
 Access the raw spectral data for more detailed analysis:
 
-```python
+```
 import obafgkm.main as obafgkm
 import matplotlib.pyplot as plt
 
@@ -147,15 +147,15 @@ plt.show()
 - **solar**: [M/H] = 0.0 (solar abundance)
 - **supersolar**: [M/H] = 0.5 (metal-rich)
 
-## 🌟 Examples
+## Examples
 
-### Example 1: Sun-like Star
+### Example 1: Solar-like Star
 ```
-python
 import obafgkm.main as obafgkm
 from obafgkm.plot import plotter
 
 # Create a Sun-like star (G-type)
+
 sun_like = obafgkm.Star(
     effective_temperature=6000,
     surface_gravity=4.0,
@@ -164,10 +164,13 @@ sun_like = obafgkm.Star(
 plotter(sun_like.select_spectra(), save=True)
 ```
 
-### Example 2: Red Giant (like Aldebaran)
+### Example 2: Red Giant
 ```
-python
+import obafgkm.main as obafgkm
+from obafgkm.plot import plotter
+
 # K-type giant star
+
 red_giant = obafgkm.Star(
     effective_temperature=4000,
     surface_gravity=1.0,
@@ -176,10 +179,13 @@ red_giant = obafgkm.Star(
 plotter(red_giant.select_spectra())
 ```
 
-### Example 3: Metal-Poor Subdwarf
+### Example 3: Metal poor Dwarf
 ```
-python
+import obafgkm.main as obafgkm
+from obafgkm.plot import plotter
+
 # Metal-poor dwarf star
+
 subdwarf = obafgkm.Star(
     effective_temperature=5000,
     surface_gravity=5.0,
@@ -188,7 +194,7 @@ subdwarf = obafgkm.Star(
 plotter(subdwarf.select_spectra())
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 obafgkm/
@@ -203,7 +209,7 @@ obafgkm/
 └── plots/                  # Saved plot outputs (created on first save)
 ```
 
-## 📈 Data Sources
+## Data Sources
 
 The spectral data in this package were synthesized from:
 - **Model Atmospheres**: MARCS model atmospheres
@@ -213,7 +219,7 @@ The spectral data in this package were synthesized from:
 
 Note: Current temperature range is limited to 3000-8000 K. Future releases aim to expand this range to include O and B type stars (>8000 K) and cooler M dwarfs (<3000 K).
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please feel free to:
 
@@ -230,7 +236,7 @@ We welcome contributions! Please feel free to:
 - Improving documentation and examples
 - Adding unit tests
 
-## 📚 Citation
+## Citation
 
 If you use `obafgkm` in your research, please cite (bibtex):
 
@@ -245,22 +251,23 @@ If you use `obafgkm` in your research, please cite (bibtex):
 }
 ```
 
-## 📜 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rocketxturtle/obafgkm/blob/main/LICENSE) file for details.
 
-## 🙏 Acknowledgments
+
+## Acknowledgments
 
 - Created at [Code/Astro](https://semaphorep.github.io/codeastro/) workshop
 - Spectral synthesis using [MARCS](https://marcs.astro.uu.se/) model atmospheres
 - Synthetic spectra generated with [Korg](https://github.com/ajwheeler/korg.jl)
 - Special thanks to the astronomy community for feedback and testing
 
-## 🐛 Bug Reports & Questions
+## Bug Reports & Questions
 
 Found a bug or have a question? Please open an issue on our [GitHub Issues](https://github.com/rocketxturtle/obafgkm/issues) page.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Extend temperature range to include O/B stars (>8000 K)
 - [ ] Add ultra-cool dwarfs (<3000 K)
