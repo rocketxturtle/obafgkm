@@ -12,6 +12,7 @@ dependencies = [
 "astropy",
 "matplotlib",
 "pytest",
+"PyQt5",
 "sphinx-rtd-theme==3.0.2"
 ]
 

@@ -65,3 +65,5 @@ def plotter(spectra_tuple:tuple, save=False):
             print(f"This spectrum has already been saved! Look in plots/{filepath.split('.txt')[0]}_spectrum.png")
         else:
             plt.savefig(os.path.join(DATADIR, 'plots', filepath.split('.txt')[0] + '_spectrum.png'), dpi=300)
+    plt.show()
+    plt.close(fig=fig)
