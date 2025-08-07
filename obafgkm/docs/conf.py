@@ -10,16 +10,20 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+import obafgkm
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
-
+sys.path.insert(
+    0, os.path.abspath("./../obafgkm")
+)  # location of orbitize files with docstrings
 
 # -- Project information -----------------------------------------------------
 
-project = 'obafgkm'
-copyright = '2025, amaya,katya,meir,nish'
-author = 'amaya,katya,meir,nish'
+# General information about the project.
+project = "obafgkm"
+copyright = "2025, Amaya Sinha, Katya Gozman, Meir Schochet, Lisha Ramon"
+author = "Amaya Sinha, Katya Gozman, Meir Schochet, Lisha Ramon"
+
 root_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
@@ -41,15 +45,32 @@ extensions = [
   "sphinx.ext.viewcode",
   "nbsphinx",
 ]
+# Disable notebook timeout
+nbsphinx_timeout = -1
+
+# Only re-run notebooks that have no outputs
+nbsphinx_execute = "auto"
+
+# Allow notebook errors
+nbsphinx_allow_errors = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+# source_suffix = ['.rst', '.md']
+source_suffix = ".rst"
+
+# The master toctree document.
+master_doc = "index"
+
+version = obafgkm.__version__
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -57,6 +78,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
